@@ -1,0 +1,448 @@
+* {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}html {
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}:root {
+    --main-color: #ffc501;
+    --secondary-color: #a8b9c0;
+    --primary-padding:60px;
+
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    margin-left: auto;
+    margin-right: auto;
+
+}/* start screens */
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End screens */
+/* start header */
+
+header{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 44;
+}
+
+
+header .logo img {
+height: 50px;
+
+}
+header .container {
+    display: flex;
+    
+    align-items: center;
+    max-width: 100%;
+    min-height: 103px;
+}
+header .container nav {
+flex-wrap: wrap;
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+} 
+header nav ul {
+display: flex;
+}
+
+header nav ul li a {
+text-decoration: none;
+display: block;
+color:white;
+padding: 40px 10px;
+font-size: 20px;
+}
+header nav ul li a:hover {
+color: cyan;
+}
+header nav ul li.active a{
+color:cyan;
+} 
+header nav .form{
+position: relative;
+width: 60px;
+height: 30px;
+position: relative;
+margin-left: 20px;
+border-left:2px solid cyan ;
+}
+header nav i {
+color: cyan;
+position: absolute;
+font-size: 20px;
+top: 50%;
+transform: translate(-50%,-50%);
+right: 0;
+cursor: pointer;
+
+}
+header nav .login-btn{
+display: block;
+background-color: aqua;
+padding: 10px;
+width: 120px;
+border-radius: 20px;
+text-align: center;
+text-decoration: none;
+background-color:#ff3150 ;
+cursor: pointer;
+}
+header nav .login-btn span{
+color:#ffc501;  font-size: 20px;
+}
+.toggle-menu {
+color: black;
+top: 10px;
+position: relative;
+
+font-size: 22px;
+} 
+
+@media (min-width: 1200px) {
+.toggle-menu {
+        display: none;
+        
+    }
+
+
+}
+@media (max-width: 1200px) {
+    header .container nav ul {
+        display: none;}
+    }
+
+    @media (max-width: 1199px) {
+        header .container nav ul {
+            display: none;
+        }
+        .toggle-menu{
+            color:white;
+        }
+        header nav .toggle-menu:hover+ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: rgb(0 0 0 / 50%);
+        }
+    
+        header nav .toggle-menu:hover+ul li a {
+            padding: 15px;
+        }
+    } 
+    /* End header */
+    /* Start Landing */
+    .landing{
+        position: relative;
+        background-color:#19283f;
+        min-height:100vh;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+.landing .landing-content{
+position: absolute;
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content:center;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+padding: 15px;
+
+} .landing .landing-content h2{
+color:white;
+text-align: center;
+font-size:40px;
+font-weight: 300;
+margin-bottom :10px;
+}
+.landing .landing-content p{
+color:white;text-align: center;
+line-height: 1.6;
+margin-bottom :30px;
+}
+.landing .landing-content .start-btn{
+display:block;
+padding: 10px;
+width: 192px;
+border-radius: 20px;
+text-align: center;
+text-decoration: none;
+background-color:#ff3150 ;
+}
+.landing-content .start-btn span{
+color:#ffc501; 
+font-size: 20px;
+font-weight: 500; 
+}
+/* End Landing */
+/* start services*/
+.services{
+padding-top: var(--primary-padding);
+padding-bottom:var(--primary-padding);
+
+}
+
+/* End services */
+/* Start components */
+.main-content{
+text-align: center;
+}
+.main-content h2::before{
+content: "";
+position: absolute;
+height: 3px;
+width:250px;
+background-color: #00c6bf;
+left: 50%;
+transform: translatex(-50%);
+bottom: -50px;
+
+}
+
+.main-content i{
+    font-size: 35px;
+    margin-bottom: 10px;    color:#ffc501;
+}
+.main-content h2{position: relative;
+    font-size: 35px;
+    margin-bottom: 10px;
+}.main-content {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+/* End components */
+.services .services-content h1{
+font-size: 400px;margin: 0;
+color:#eff7fa;
+font-weight: bold;
+
+}.services .services-content .srv{
+
+   display:flex;
+   justify-content:space-between;
+
+}
+.services .services-content .srv .coln{
+    position: relative;
+    text-align: center;
+}
+.services .services-content .srv .coln i {
+    color:#00c6bf;
+    font-size:60px;
+    position: absolute;
+    bottom: 80px;
+    left:55%;
+    margin-bottom: 93px;
+    transform: translate(-50%, -50%);
+}
+.services .services-content .srv .coln h3{
+line-height: 1.7;
+position: relative;
+top: -50px;
+color: #ffc501;
+font-size: 20px;
+font-weight:600;
+}
+.services .services-content .srv .coln p{
+    line-height: 1.7;
+    position: relative;
+    top: -40px;
+    color:#a8b9c0;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .srv{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .srv .con{
+        width: 100%;
+    }
+}
+/* end services */
+/* start portofolio */
+.portfolio{
+    padding-top: var(--primary-padding);
+    padding-bottom: var(--primary-padding);
+    background-color: #eff7fa;
+}
+.portfolio .container ul{
+    display: flex;
+    margin-top:60px;
+    justify-content:center;
+}
+.portfolio .container ul li{
+    padding: 10px;
+    color: #333;
+    cursor:pointer;
+    transition: all 0.3s;
+}
+.portfolio .container ul li.active{
+background-color: #ff3150;
+color:#ffc501;
+}.portfolio .container ul li:hover{
+    background-color: #ff3150;
+    color:#ffc501;
+}.portfolio .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}.portfolio .image-container .box {
+    
+    overflow: hidden;
+    position: relative;
+    max-height: 100%;
+}
+.portfolio .image-container img {
+    max-width: 100%;
+    transition: 0.3s;
+}@media (max-width:767px) {
+    .portfolio .image-container .box {
+        flex-basis: 100%;
+
+    }
+
+}
+
+@media (min-width:768px) {
+    .portfolio .image-container .box {
+        flex-basis: 50%;
+    }
+
+}
+
+@media (min-width:1199px) {
+    .portfolio .image-container .box {
+        flex-basis: 25%;
+    }
+
+}
+.btn {
+    padding: 15px;
+    background-color: #19c8fa;
+    
+    width: 205px;
+    text-align: center;
+    text-decoration: none;
+    margin: 30px auto;
+    display: block; background-color: #ff3150;
+    color:#ffc501;
+    border-radius:21px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #ffc501;
+    color:#ff3150;
+
+}
+/* start hover Box */
+.box:hover .caption {
+
+    bottom: 0;
+    height: 30%;
+}
+
+.box:hover::after {
+    content: '+';
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #ff3150;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    cursor: pointer;
+
+}
+
+.box:hover img {
+    opacity: 0.5;
+}
+
+.box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+/* End hover Box */
+.caption {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 0;
+    padding: 10px;
+    line-height: 1.7;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+.caption h4 {
+    color: #19c8fa
+}
+
+.caption h3 {
+    color: #333;
+}
+/*////////////////////////////////////////////////////////////////*/
+/* End portofolio */
+/* start About */
+.About{
+    padding-top: var(--primary-padding);
+    padding-bottom: var(--primary-padding);
+}
+/* End About */
